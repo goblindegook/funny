@@ -1,8 +1,6 @@
-# funny
+# funny [![Build Status](https://travis-ci.org/goblindegook/funny.svg?branch=master)](https://travis-ci.org/goblindegook/funny)
 
 Simple modules for functional programming, done for fun.
-
-[![Build Status](https://travis-ci.org/goblindegook/funny.svg?branch=master)](https://travis-ci.org/goblindegook/funny)
 
 ## Guidelines
 
