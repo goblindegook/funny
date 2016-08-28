@@ -2,6 +2,8 @@
 
 Simple modules for functional programming, done for fun.
 
+[![Build Status](https://travis-ci.org/goblindegook/funny.svg?branch=master)](https://travis-ci.org/goblindegook/funny)
+
 ## Guidelines
 
 * Use ECMAScript 2015+. I have no plan to support ECMAScript 5 or older, so Bring Your Own Transpiler.
