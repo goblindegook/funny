@@ -1,0 +1,29 @@
+{
+  "name": "funny-flatten",
+  "description": "Simple modules for functional programming, done for fun.",
+  "version": "1.0.0",
+  "author": "Luís Rodrigues",
+  "license": "MIT",
+  "main": "index.js",
+  "jsnext:main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/goblindegook/funny",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goblindegook/funny.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goblindegook/funny/issues"
+  },
+  "dependencies": {
+    "funny-concat": "^1.0.0"
+  },
+  "keywords": [
+    "flatten",
+    "fp",
+    "funny",
+    "functional"
+  ]
+}

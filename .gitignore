@@ -1,0 +1,4 @@
+.vscode/.browse.VC.db*
+.DS_Store
+node_modules/
+*.log

@@ -1,0 +1,40 @@
+{
+  "name": "funny",
+  "description": "Simple modules for functional programming, done for fun.",
+  "version": "1.0.0",
+  "author": "Luís Rodrigues",
+  "license": "MIT",
+  "scripts": {
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "test": "ava"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": "babel-register"
+  },
+  "homepage": "https://github.com/goblindegook/fun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goblindegook/fun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goblindegook/fun/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2016": "^6.11.3",
+    "babel-register": "^6.11.5",
+    "lerna": "2.0.0-beta.24",
+    "standard": "^7.1.2"
+  },
+  "keywords": [
+    "fp",
+    "funny",
+    "functional"
+  ]
+}
