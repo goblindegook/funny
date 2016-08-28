@@ -1,7 +1,7 @@
 {
   "name": "funny-memoize",
   "description": "Simple modules for functional programming, done for fun.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Luís Rodrigues",
   "license": "MIT",
   "main": "index.js",
