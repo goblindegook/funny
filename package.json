@@ -5,6 +5,7 @@
   "author": "Luís Rodrigues",
   "license": "MIT",
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "lint": "standard",
     "pretest": "npm run lint",
     "test": "ava"
