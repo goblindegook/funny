@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - 'stable'
   - '6.0'
-before_scripts:
+before_script:
   - npm run bootstrap
