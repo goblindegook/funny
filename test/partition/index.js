@@ -1,7 +1,7 @@
 import test from 'ava'
 import partition from '../../packages/partition'
 
-test('partition() an empty array returns two empty arrays', t => {
+test('partition() of an empty array returns two empty arrays', t => {
   t.deepEqual(partition(x => true, []), [[], []])
 })
 
