@@ -1,7 +1,7 @@
 {
   "name": "funny-all",
   "description": "Simple modules for functional programming, done for fun.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Luís Rodrigues",
   "license": "MIT",
   "main": "index.js",
