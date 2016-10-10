@@ -29,7 +29,7 @@
     "ava": "^0.16.0",
     "babel-preset-latest": "^6.14.0",
     "babel-register": "^6.14.0",
-    "lerna": "2.0.0-beta.26",
+    "lerna": "2.0.0-beta.30",
     "standard": "^8.0.0"
   },
   "keywords": [
