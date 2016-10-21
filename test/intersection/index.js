@@ -13,6 +13,14 @@ test('intersection() of two lists returns elements shared among them', t => {
   t.deepEqual(intersection([1, 2, 3], [2, 3, 4]), [2, 3])
 })
 
+test('intersection() of two lists returns elements shared among them in order', t => {
+  t.deepEqual(intersection([1, 2, 3], [4, 3, 2]), [3, 2])
+})
+
+test('intersection() of two lists returns elements shared among them with no duplicates', t => {
+  t.deepEqual(intersection([1, 2, 2], [2, 2, 3]), [2])
+})
+
 test('intersection() is curried', t => {
   t.deepEqual(intersection([1, 2])([2, 3]), [2])
 })

@@ -1,6 +1,7 @@
 import contains from 'funny-contains'
 import curryN from 'funny-curry-n'
 import filter from 'funny-filter'
+import unique from 'funny-unique'
 
 /**
  * List intersection.
@@ -10,7 +11,7 @@ import filter from 'funny-filter'
  * @return {Array}       Intersection between lists.
  */
 function _intersection (list1, list2) {
-  return filter(item => contains(item, list2), list1)
+  return unique(filter(item => contains(item, list1), list2))
 }
 
 const intersection = curryN(2, _intersection)
