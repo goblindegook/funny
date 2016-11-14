@@ -1,6 +1,11 @@
 import test from 'ava'
 import compose from '../../packages/compose'
 
+test('compose() returns a function', t => {
+  const biggest = compose(Math.max)
+  t.is(typeof biggest, 'function')
+})
+
 test('compose() accepts a single function', t => {
   const biggest = compose(Math.max)
   t.is(biggest(0.1, 2.3, 4.5, 4.2), 4.5)
