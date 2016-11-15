@@ -1,7 +1,7 @@
 import curryN from 'funny-curry-n'
 
 /**
- * Addition.
+ * Division.
  *
  * @param  {Number} dividend Dividend.
  * @param  {Number} divisor  Divisor.

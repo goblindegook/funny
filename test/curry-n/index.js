@@ -1,6 +1,11 @@
 import test from 'ava'
 import curryN from '../../packages/curry-n'
 
+test('curryN() returns a function', t => {
+  const curriedFn = curryN(i => i)
+  t.is(typeof curriedFn, 'function')
+})
+
 test('curryN() takes functions with arity 0', t => {
   const curriedOne = curryN(0, () => 1)
   t.is(curriedOne(), 1)

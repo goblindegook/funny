@@ -1,6 +1,11 @@
 import test from 'ava'
 import constant from '../../packages/constant'
 
+test('constant() returns a function', t => {
+  const fn = constant()
+  t.is(typeof fn, 'function')
+})
+
 test('constant() returns a function that always returns null', t => {
   const value = null
   const always = constant(value)

@@ -1,4 +1,11 @@
 {
   "eslint.enable": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
   "standard.enable": true
 }
