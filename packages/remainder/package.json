@@ -1,7 +1,7 @@
 {
-  "name": "funny-find-index",
+  "name": "funny-remainder",
   "description": "Simple modules for functional programming, done for fun.",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": "Luís Rodrigues",
   "license": "MIT",
   "main": "index.js",
@@ -21,7 +21,7 @@
     "funny-curry-n": "^1.0.1"
   },
   "keywords": [
-    "find-index",
+    "remainder",
     "fp",
     "funny",
     "functional"
