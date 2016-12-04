@@ -3,8 +3,8 @@
  *
  * It only does nothing.
  *
- * @param  {any} i Argument.
- * @return {any}   Argument returned.
+ * @param  {*}   i Argument.
+ * @return {*}     Argument returned.
  */
 export default function identity (i) {
   return i

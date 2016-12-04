@@ -4,7 +4,7 @@ import curryN from 'funny-curry-n'
 /**
  * Return a list with the value repeated n times.
  *
- * @param  {any}    item Item to repeat.
+ * @param  {*}      item Item to repeat.
  * @param  {Number} n    Number of repetitions.
  * @return {Array}       List with item repeated n times.
  */
@@ -17,7 +17,7 @@ function _repeat (item, n) {
  *
  * @param  {Array}  acc  Ac
  * cumulated result.
- * @param  {any}    item Item to repeat.
+ * @param  {*}      item Item to repeat.
  * @param  {Number} n    Number of repetitions.
  * @return {Array}       List with item repeated n times.
  */

@@ -1,7 +1,7 @@
 {
   "name": "funny-chain",
   "description": "Simple modules for functional programming, done for fun.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Luís Rodrigues",
   "license": "MIT",
   "main": "index.js",
@@ -20,7 +20,7 @@
   "dependencies": {
     "funny-concat": "^1.0.1",
     "funny-curry-n": "^1.0.1",
-    "funny-fold": "^1.0.1"
+    "funny-fold": "^1.0.2"
   },
   "keywords": [
     "chain",

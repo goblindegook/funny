@@ -3,7 +3,7 @@ import curryN from 'funny-curry-n'
 import fold from 'funny-fold'
 
 /**
- * Map.
+ * Chain, or flatmap.
  *
  * @param  {Function} fn   Mapping function.
  * @param  {Array}    list List of items to chain.

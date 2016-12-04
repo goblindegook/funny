@@ -5,9 +5,9 @@ import curryN from 'funny-curry-n'
  * left-to-right), reducing it to a single value.
  *
  * @param  {Function} folder  Folder function.
- * @param  {any}      initial Initial accumulated value.
+ * @param  {*}        initial Initial accumulated value.
  * @param  {Array}    list    List to fold.
- * @return {any}              Accumulated value.
+ * @return {*}                Accumulated value.
  */
 function _fold (folder, initial, list) {
   return _recursiveFold(initial, 0, folder, list)
@@ -16,11 +16,11 @@ function _fold (folder, initial, list) {
 /**
  * Recursive fold.
  *
- * @param  {any}      acc    Accumulated result.
+ * @param  {*}        acc    Accumulated result.
  * @param  {Number}   index  Current item index.
  * @param  {Function} folder Folder function.
  * @param  {Array}    list   List to fold.
- * @return {any}             Fold result.
+ * @return {*}               Fold result.
  */
 function _recursiveFold (acc, index, folder, list) {
   if (index < list.length) {

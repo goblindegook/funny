@@ -7,9 +7,9 @@ import reverse from 'funny-reverse'
  * right-to-left), reducing it to a single value.
  *
  * @param  {Function} folder  Folder function.
- * @param  {any}      initial Initial accumulated value.
+ * @param  {*}        initial Initial accumulated value.
  * @param  {Array}    list    List to reduce.
- * @return {any}              Accumulated value.
+ * @return {*}                Accumulated value.
  */
 function _foldRight (folder, initial, list) {
   const lastIndex = list.length - 1

@@ -3,7 +3,7 @@ import curryN from 'funny-curry-n'
 /**
  * Contains.
  *
- * @param  {any}     element Element to look for.
+ * @param  {*}       element Element to look for.
  * @param  {Array}   list    List to check.
  * @return {Boolean}         Whether the element exists in the list.
  */

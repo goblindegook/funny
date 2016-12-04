@@ -6,7 +6,7 @@ import findIndex from 'funny-find-index'
  *
  * @param  {Function} predicate  Function that determines whether to pick the item.
  * @param  {Array}    list       List of items to find.
- * @return {any}                 Found element, if any.
+ * @return {*}                   Found element, if any.
  */
 function _find (predicate, list) {
   const index = findIndex(predicate, list)

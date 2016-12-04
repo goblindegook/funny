@@ -7,7 +7,7 @@ import fold from 'funny-fold'
  *
  * @param  {Function} reducer Reducer function.
  * @param  {Array}    list    List to reduce.
- * @return {any}              Accumulated value.
+ * @return {*}                Accumulated value.
  */
 function _reduce (reducer, list) {
   let [acc, ...rest] = list

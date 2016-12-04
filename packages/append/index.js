@@ -4,7 +4,7 @@ import curryN from 'funny-curry-n'
 /**
  * Append an item to the end of a list.
  *
- * @param  {any}   item Items to append.
+ * @param  {*}     item Items to append.
  * @param  {Array} list List to receive the new item.
  * @return {Array}      List with appended item.
  */

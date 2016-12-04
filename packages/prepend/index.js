@@ -4,7 +4,7 @@ import curryN from 'funny-curry-n'
 /**
  * Append an item to the start of a list.
  *
- * @param  {any}   item Items to prepend.
+ * @param  {*}     item Items to prepend.
  * @param  {Array} list List to receive the new item.
  * @return {Array}      List with prepended item.
  */

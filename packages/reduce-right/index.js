@@ -8,7 +8,7 @@ import reverse from 'funny-reverse'
  *
  * @param  {Function} reducer Reducer function.
  * @param  {Array}    list    List to reduce.
- * @return {any}              Accumulated value.
+ * @return {*}                Accumulated value.
  */
 function _reduceRight (reducer, list) {
   const [acc, ...rest] = reverse(list)

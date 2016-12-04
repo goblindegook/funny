@@ -3,8 +3,8 @@ import curryN from 'funny-curry-n'
 /**
  * Strictly compare two operands.
  *
- * @param  {any}     a A operand.
- * @param  {any}     b B operand.
+ * @param  {*}       a A operand.
+ * @param  {*}       b B operand.
  * @return {Boolean}   Strict comparison result.
  */
 function _same (a, b) {
