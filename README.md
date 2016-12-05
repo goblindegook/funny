@@ -5,7 +5,7 @@ Simple modules for functional programming, done for fun.
 ## Guidelines
 
 * Use ECMAScript 2015+. I have no plan to support ECMAScript 5 or older, so Bring Your Own Transpiler.
-* Test-drive all development using [AVA](https://ava.li/).
+* Test-drive all development using [Jest](https://facebook.github.io/jest/).
 * Modules must be as minimal and have no external dependencies.
 * The API must expose no more than necessary.
 * The API should accept array arguments last to facilitate composition of curried functions.
