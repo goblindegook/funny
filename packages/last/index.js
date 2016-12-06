@@ -1,3 +1,6 @@
+import head from 'funny-head'
+import length from 'funny-length'
+
 /**
  * Extract the last element off a list.
  *
@@ -5,6 +8,6 @@
  * @return {*}          Last element of provided list.
  */
 export default function last (list) {
-  const length = list.length
-  return list.slice(length - 1, length)[0]
+  const listLength = length(list)
+  return head(list.slice(listLength - 1, listLength))
 }

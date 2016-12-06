@@ -6,7 +6,7 @@ import curryN from 'funny-curry-n'
  *
  * @param  {Function} predicate Predicate function.
  * @param  {Array}    list      List to iterate over.
- * @return {Boolean}            Whether no items in the list match the predicate.
+ * @return {Boolean}            Whether no items in the list satisfy the predicate.
  */
 function _none (predicate, list) {
   for (let i = 0, length = list.length; i < length; i++) {

@@ -1,19 +1,19 @@
-/* global expect it */
-
 import mean from '..'
 
-it('mean() of an empty array is not a number', () => {
-  expect(isNaN(mean([]))).toBe(true)
-})
+describe('mean', () => {
+  it('is not a number when the list is empty', () => {
+    expect(isNaN(mean([]))).toBe(true)
+  })
 
-it('mean() of a single-item array', () => {
-  expect(mean([1])).toBe(1)
-})
+  it('is the item value when the list has a single numerical item', () => {
+    expect(mean([1])).toBe(1)
+  })
 
-it('mean() of a numerical array', () => {
-  expect(mean([2, 4])).toBe(3)
-})
+  it('computes the mean of a list of numbers', () => {
+    expect(mean([2, 4])).toBe(3)
+  })
 
-it('mean() of a numerical array with negative numbers', () => {
-  expect(mean([-2, 2])).toBe(0)
+  it('computes the mean of a list containing negative numbers', () => {
+    expect(mean([-2, 2])).toBe(0)
+  })
 })

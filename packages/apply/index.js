@@ -5,6 +5,7 @@ import curryN from 'funny-curry-n'
  *
  * @param  {Function} fn   Function to apply.
  * @param  {Array}    args List of function arguments.
+ * @return {*}             Result of arguments applied to the function.
  */
 function _apply (fn, args) {
   return fn(...args)

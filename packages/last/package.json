@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/goblindegook/funny/issues"
   },
+  "dependencies": {
+    "funny-head": "^1.0.0"
+  },
   "keywords": [
     "last",
     "fp",

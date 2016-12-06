@@ -1,5 +1,3 @@
-/* global describe expect it */
-
 import add from '..'
 
 describe('add', () => {
