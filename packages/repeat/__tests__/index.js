@@ -18,7 +18,7 @@ describe('repeat', () => {
     expect(repeat(obj, 2)).toEqual([obj, obj])
   })
 
-  it('does not flatten list items', () => {
+  it('preserves nested array items', () => {
     const list = [1]
     expect(repeat(list, 2)).toEqual([list, list])
   })

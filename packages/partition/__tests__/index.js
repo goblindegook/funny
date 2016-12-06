@@ -17,7 +17,7 @@ describe('partition', () => {
     expect(partition(x => x % 2, [1, 2, 3])).toEqual([[1, 3], [2]])
   })
 
-  it('does not flatten array items', () => {
+  it('preserves nested array items', () => {
     expect(partition(x => x.length === 1, [[1], [2], [3, 4]])).toEqual([[[1], [2]], [[3, 4]]])
   })
 

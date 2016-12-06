@@ -5,7 +5,7 @@ describe('flatten', () => {
     expect(flatten(1)).toEqual([])
   })
 
-  it('does not change a flattened array', () => {
+  it('preserves an already flattened array', () => {
     expect(flatten([1, 2])).toEqual([1, 2])
   })
 

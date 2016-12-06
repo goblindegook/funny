@@ -1,11 +1,11 @@
 import map from '..'
 
 describe('map', () => {
-  it('does not change an empty array', () => {
+  it('preserves an empty array', () => {
     expect(map(i => i, [])).toEqual([])
   })
 
-  it('does not change an array if the iterated function is the identity', () => {
+  it('preserves an array if the iterated function is the identity', () => {
     expect(map(i => i, [1, 2, 3])).toEqual([1, 2, 3])
   })
 
@@ -13,7 +13,7 @@ describe('map', () => {
     expect(map(i => 2 * i, [1, 2, 3])).toEqual([2, 4, 6])
   })
 
-  it('does not flatten arrays', () => {
+  it('preserves nested array items', () => {
     expect(map(i => [i, i], [1, 2, 3])).toEqual([[1, 1], [2, 2], [3, 3]])
   })
 

@@ -1,15 +1,15 @@
 import filter from '..'
 
 describe('filter', () => {
-  it('does not change an empty array', () => {
+  it('preserves an empty array', () => {
     expect(filter(x => true, [])).toEqual([])
   })
 
-  it('does not change an array if predicate is always true', () => {
+  it('preserves an array if predicate is satisfied', () => {
     expect(filter(x => true, [1, 2, 3])).toEqual([1, 2, 3])
   })
 
-  it('empties an array if predicate is always false', () => {
+  it('empties an array if predicate is not satisfied', () => {
     expect(filter(x => false, [1, 2, 3])).toEqual([])
   })
 
@@ -17,7 +17,7 @@ describe('filter', () => {
     expect(filter(x => x % 2, [1, 2, 3])).toEqual([1, 3])
   })
 
-  it('does not flatten array items', () => {
+  it('preserves nested array items', () => {
     expect(filter(x => x.length === 1, [[1], [2], [3, 4]])).toEqual([[1], [2]])
   })
 

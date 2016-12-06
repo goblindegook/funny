@@ -9,7 +9,7 @@ describe('findIndex', () => {
     expect(findIndex(x => false, [1, 2, 3])).toBe(-1)
   })
 
-  it('findIndexs the first element that satisfies the predicate', () => {
+  it('finds the first element that satisfies the predicate', () => {
     expect(findIndex(x => x === 1, [1, 2, 1])).toBe(0)
   })
 

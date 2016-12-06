@@ -1,11 +1,11 @@
 import reverse from '..'
 
 describe('reverse', () => {
-  it('does not change an empty array', () => {
+  it('preserves an empty array', () => {
     expect(reverse([])).toEqual([])
   })
 
-  it('does not change a single item array', () => {
+  it('preserves a single item array', () => {
     expect(reverse([0])).toEqual([0])
   })
 

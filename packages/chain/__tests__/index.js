@@ -1,11 +1,11 @@
 import chain from '..'
 
 describe('chain', () => {
-  it('does not change an empty array', () => {
+  it('preserves an empty array', () => {
     expect(chain(i => i, [])).toEqual([])
   })
 
-  it('does not change an array if the iterated function is the identity', () => {
+  it('preserves an array if the iterated function is the identity', () => {
     expect(chain(i => i, [1, 2, 3])).toEqual([1, 2, 3])
   })
 
