@@ -1,15 +1,15 @@
-/* global expect it */
-
 import sum from '..'
 
-it('sum() with an empty array returns 0', () => {
-  expect(sum([])).toBe(0)
-})
+describe('sum', () => {
+  it('returns 0 for an empty list', () => {
+    expect(sum([])).toBe(0)
+  })
 
-it('sum() with a single item array returns the item', () => {
-  expect(sum([1])).toBe(1)
-})
+  it('returns the item for single-item list ', () => {
+    expect(sum([1])).toBe(1)
+  })
 
-it('sum() adds all the numbers', () => {
-  expect(sum([1, 2, 3, 4])).toBe(10)
+  it('adds all the numbers', () => {
+    expect(sum([1, 2, 3, 4])).toBe(10)
+  })
 })
