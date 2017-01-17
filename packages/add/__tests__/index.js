@@ -1,19 +1,20 @@
+import jsc from 'jsverify'
 import add from '..'
 
 describe('add', () => {
-  it('supports the identity property', () => {
-    expect(add(0, 3)).toBe(3)
+  jsc.property('identity', 'number', (n) => {
+    return add(0, n) === n
   })
 
-  it('supports the commutative property', () => {
-    expect(add(2, 3)).toBe(add(3, 2))
+  jsc.property('commutative', 'number', 'number', (m, n) => {
+    return add(m, n) === add(n, m)
   })
 
-  it('supports the associative property', () => {
-    expect(add(add(2, 3), 4)).toBe(add(2, add(3, 4)))
+  jsc.property('associative', 'number', 'number', 'number', (m, n, o) => {
+    return add(m, add(n, o)) === add(add(m, n), o)
   })
 
-  it('is curried', () => {
-    expect(add(1)(2)).toBe(3)
+  jsc.property('curry', 'number', 'number', (m, n) => {
+    return add(m)(n) === add(m, n)
   })
 })

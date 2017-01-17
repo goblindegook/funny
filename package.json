@@ -20,7 +20,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "/node_modules\/(!?funny-)/"
+      "/node_modules/(!?funny-)/"
     ]
   },
   "standard": {
@@ -37,6 +37,7 @@
     "babel-preset-latest": "^6.14.0",
     "babel-register": "^6.14.0",
     "jest": "^17.0.3",
+    "jsverify": "^0.7.4",
     "lerna": "^2.0.0-beta",
     "standard": "^8.0.0"
   },
