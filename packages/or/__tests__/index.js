@@ -10,6 +10,10 @@ describe('or', () => {
     return or(false, n) === n
   })
 
+  jsc.property('idempotence', 'bool', (n) => {
+    return or(n, n) === n
+  })
+
   jsc.property('commutativity', 'bool', 'bool', (m, n) => {
     return or(m, n) === or(n, m)
   })

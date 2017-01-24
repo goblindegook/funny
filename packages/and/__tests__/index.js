@@ -10,6 +10,10 @@ describe('and', () => {
     return and(true, n) === n
   })
 
+  jsc.property('idempotence', 'bool', (n) => {
+    return and(n, n) === n
+  })
+
   jsc.property('commutativity', 'bool', 'bool', (m, n) => {
     return and(m, n) === and(n, m)
   })
