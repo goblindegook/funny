@@ -1,27 +1,28 @@
+import jsc from 'jsverify'
 import multiply from '..'
 
 describe('multiply', () => {
-  it('supports the property of zero', () => {
-    expect(multiply(0, 3)).toBe(0)
+  jsc.property('absorption', 'number', (n) => {
+    return multiply(0, n) === 0
   })
 
-  it('supports the identity property', () => {
-    expect(multiply(1, 3)).toBe(3)
+  jsc.property('identity', 'number', (n) => {
+    return multiply(1, n) === n
   })
 
-  it('supports the commutative property', () => {
-    expect(multiply(2, 3)).toBe(multiply(3, 2))
+  jsc.property('negation', 'number', (n) => {
+    return multiply(-1, n) === -n
   })
 
-  it('supports the associative property', () => {
-    expect(multiply(multiply(2, 3), 4)).toBe(multiply(2, multiply(3, 4)))
+  jsc.property('commutativity', 'number', 'number', (m, n) => {
+    return multiply(m, n) === multiply(n, m)
   })
 
-  it('supports negation', () => {
-    expect(multiply(-1, 3)).toBe(-3)
+  jsc.property('associativity', 'integer', 'integer', 'integer', (m, n, o) => {
+    return multiply(m, multiply(n, o)) === multiply(multiply(m, n), o)
   })
 
-  it('is curried', () => {
-    expect(multiply(1)(3)).toBe(3)
+  jsc.property('curry', 'number', 'number', (m, n) => {
+    return multiply(m)(n) === multiply(m, n)
   })
 })

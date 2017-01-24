@@ -1,16 +1,12 @@
 import converge from '..'
-
-const fn = (...args) => args
-const add = (a, b) => a + b
-const mult = (a, b) => a * b
-const args = [2, 3]
+import jsc from 'jsverify'
 
 describe('converge', () => {
-  it('invokes the function with the converged functions and arguments provided', () => {
-    expect(converge(fn, [add, mult], ...args)).toEqual(fn(add(...args), mult(...args)))
-  })
+  jsc.property('converges results of individual functions', 'fun', 'array fun', 'nearray',
+    (fn, fns, args) => converge(fn, fns, ...args) === fn(...fns.map(f => f(...args)))
+  )
 
-  it('is curried', () => {
-    expect(converge(fn)([add, mult])(...args)).toEqual(fn(add(...args), mult(...args)))
-  })
+  jsc.property('curry', 'fun', 'array fun', 'nearray',
+    (fn, fns, args) => converge(fn)(fns)(...args) === converge(fn, fns, ...args)
+  )
 })

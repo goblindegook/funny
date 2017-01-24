@@ -6,11 +6,11 @@ describe('add', () => {
     return add(0, n) === n
   })
 
-  jsc.property('commutative', 'number', 'number', (m, n) => {
+  jsc.property('commutativity', 'number', 'number', (m, n) => {
     return add(m, n) === add(n, m)
   })
 
-  jsc.property('associative', 'number', 'number', 'number', (m, n, o) => {
+  jsc.property('associativity', 'number', 'number', 'number', (m, n, o) => {
     return add(m, add(n, o)) === add(add(m, n), o)
   })
 

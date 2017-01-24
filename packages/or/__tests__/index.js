@@ -1,19 +1,24 @@
+import jsc from 'jsverify'
 import or from '..'
 
 describe('or', () => {
-  it('true && true = true', () => {
-    expect(or(true, true)).toBe(true)
+  jsc.property('absorption', 'bool', (n) => {
+    return or(true, n) === true
   })
 
-  it('true && false = true', () => {
-    expect(or(true, false)).toBe(true)
+  jsc.property('identity', 'bool', (n) => {
+    return or(false, n) === n
   })
 
-  it('false && true = true', () => {
-    expect(or(false, true)).toBe(true)
+  jsc.property('commutativity', 'bool', 'bool', (m, n) => {
+    return or(m, n) === or(n, m)
   })
 
-  it('false && false = false', () => {
-    expect(or(false, false)).toBe(false)
+  jsc.property('associativity', 'bool', 'bool', 'bool', (m, n, o) => {
+    return or(m, or(n, o)) === or(or(m, n), o)
+  })
+
+  jsc.property('curry', 'bool', 'bool', (m, n) => {
+    return or(m)(n) === or(m, n)
   })
 })
