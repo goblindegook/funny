@@ -13,4 +13,3 @@ describe('unique', () => {
     expect(unique([1, 2, 3, 1, 3])).toEqual([1, 2, 3])
   })
 })
-

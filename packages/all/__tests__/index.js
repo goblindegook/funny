@@ -17,4 +17,3 @@ describe('all', () => {
     expect(all(i => i, [false, false])).toBe(false)
   })
 })
-

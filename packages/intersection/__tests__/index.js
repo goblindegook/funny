@@ -25,4 +25,3 @@ describe('intersection', () => {
     expect(intersection([1, 2])([2, 3])).toEqual([2])
   })
 })
-

@@ -13,4 +13,3 @@ describe('reverse', () => {
     expect(reverse([0, 1, 2])).toEqual([2, 1, 0])
   })
 })
-
