@@ -1,15 +1,12 @@
+import jsc from 'jsverify'
 import apply from '..'
 
 describe('apply', () => {
-  it('invokes the function with the arguments provided in the array', () => {
-    const fn = (...args) => args
-    const args = [1, 2, 3]
-    expect(apply(fn, args)).toEqual(args)
+  jsc.property('invocation', 'fn', 'array', (f, a) => {
+    return jsc.utils.isEqual(apply(f, a), f(...a))
   })
 
-  it('is curried', () => {
-    const fn = (...args) => args
-    const args = [1, 2, 3]
-    expect(apply(fn)(args)).toEqual(args)
+  jsc.property('curry', 'fn', 'array', (f, a) => {
+    return jsc.utils.isEqual(apply(f)(a), apply(f, a))
   })
 })
