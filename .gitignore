@@ -1,4 +1,5 @@
 .vscode/.browse.VC.db*
 .DS_Store
+coverage/
 node_modules/
 *.log
