@@ -1,18 +1,12 @@
+import jsc from 'jsverify'
 import compose from '..'
 
 describe('compose', () => {
-  it('returns a function', () => {
-    const biggest = compose(Math.max)
-    expect(typeof biggest).toBe('function')
+  jsc.property('identity', 'fn', 'array', (fn, args) => {
+    return jsc.utils.isEqual(compose(fn)(...args), fn(...args))
   })
 
-  it('accepts a single function', () => {
-    const biggest = compose(Math.max)
-    expect(biggest(0.1, 2.3, 4.5, 4.2)).toBe(4.5)
-  })
-
-  it('combines multiple functions right-to-left', () => {
-    const biggestRoundedUp = compose(Math.ceil, Math.max)
-    expect(biggestRoundedUp(0.1, 2.3, 4.5, 4.2)).toBe(5)
+  jsc.property('composition', 'fn', 'fn', 'array', (f, g, args) => {
+    return jsc.utils.isEqual(compose(f, g)(...args), f(g(...args)))
   })
 })
