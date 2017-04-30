@@ -9,7 +9,7 @@ import curryN from 'funny-curry-n'
  */
 function _findIndex (predicate, list) {
   for (let i = 0, length = list.length; i < length; i++) {
-    if (predicate(list[i])) {
+    if (predicate(list[i], i, list)) {
       return i
     }
   }

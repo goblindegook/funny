@@ -9,7 +9,7 @@ import curryN from 'funny-curry-n'
  */
 function _findLastIndex (predicate, list) {
   for (let i = list.length - 1; i >= 0; i--) {
-    if (predicate(list[i])) {
+    if (predicate(list[i], i, list)) {
       return i
     }
   }

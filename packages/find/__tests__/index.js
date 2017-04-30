@@ -9,8 +9,16 @@ describe('find', () => {
     expect(find(x => false, [1, 2, 3])).toBe(undefined)
   })
 
-  it('finds the first element that satisfies the predicate', () => {
-    expect(find(x => x === 1, [1, 2, 3])).toBe(1)
+  it('finds the first element that satisfies the predicate using element', () => {
+    expect(find(e => e === 1, [1, 2, 1])).toBe(1)
+  })
+
+  it('finds the first element that satisfies the predicate using index', () => {
+    expect(find((e, i) => i === 1, [1, 2, 1])).toBe(2)
+  })
+
+  it('finds the first element that satisfies the predicate using list', () => {
+    expect(find((e, i, l) => e === l[1], [1, 2, 1])).toBe(2)
   })
 
   it('is curried', () => {
